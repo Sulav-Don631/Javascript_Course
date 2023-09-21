@@ -168,7 +168,7 @@ const client = {
 console.log(
   `${client.name} has ${client.friends.length} friends and his best friend is ${client.friends[0]}`
 );
-*/
+
 
 //Object Methods
 
@@ -204,3 +204,66 @@ console.log(sulav.age);
 //"Sulav is a 20 year old student. He has a/no Driver's liscence."
 
 console.log(sulav.getSummary());
+
+
+
+//Loops
+
+for (let rep = 0; rep <= 10; rep++) {
+  console.log("repetition");
+}
+
+const sulav = ["Sulav", "Shrestha", 23, ["google", "facebook"]];
+
+for (let i = 0; i <= sulav.length; i++) {
+  console.log(`${sulav[i]}`);
+}
+
+const birthYear = [1999, 2000, 2024, 1991];
+const age = [];
+for (let i = 0; i < birthYear.length; i++) {
+  let temp = 2024 - birthYear[i];
+  age.push(temp);
+  temp = 0;
+  console.log(age[i]);
+}
+
+//continue and break
+console.log("--ONLY STRINGS--");
+
+for (let i = 0; i <= sulav.length; i++) {
+  if (typeof sulav[i] !== "string") continue;
+  console.log(sulav[i], typeof sulav[i]);
+}
+
+console.log("--BREAK WITH NUMBER--");
+
+for (let i = 0; i <= sulav.length; i++) {
+  if (typeof sulav[i] === "number") break;
+  console.log(sulav[i], typeof sulav[i]);
+}
+*/
+
+//Looping backward
+
+const sulav = ["Sulav", "Shrestha", 23, "student", ["google", "facebook"]];
+
+for (let i = sulav.length - 1; i >= 0; i--) {
+  console.log(sulav[i]);
+}
+
+//while loop
+let rep = 1;
+while (rep < 10) {
+  console.log("you are doing great");
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6 + 1);
+while (dice != 6) {
+  console.log(`You rolled dice ${dice}`);
+  dice = Math.trunc(Math.random() * 6 + 1);
+  if (dice === 6) {
+    console.log("Loop is ending..");
+  }
+}
