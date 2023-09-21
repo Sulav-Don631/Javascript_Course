@@ -19,7 +19,7 @@ const checkWinner = function (avgDolphine, avgKoalas) {
 };
 
 checkWinner(avgDolphine, avgKoalas);
-*/
+
 
 const calcTip = function (bill) {
   if (bill >= 50 && bill <= 300) {
@@ -52,3 +52,4 @@ const totalBills =
 console.log(`Total Bills is ${totalBills}`);
 const total = totalTips + totalBills;
 console.log(`Total amount will be ${total}`);
+*/

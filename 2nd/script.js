@@ -126,4 +126,81 @@ console.log(sulav.includes("Shrestha"));
 if (sulav.includes("Shrestha")) {
   console.log("Your surname is Shrestha.");
 }
+
+
+//Objects
+
+const sulav = {
+  firstName: "Sulav",
+  lastName: "Shrestha",
+  age: 20,
+  hobby: ["football", "gaming"],
+};
+
+console.log(sulav.firstName);
+console.log(sulav["lastName"]);
+
+const nameKey = "Name";
+console.log(sulav["first" + nameKey]);
+console.log(sulav["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you wanna know about me? firstName,lastNAme,age or hobby?"
+);
+
+if (sulav[interestedIn]) {
+  console.log(sulav[interestedIn]);
+} else {
+  console.log("Np information found");
+}
+
+//Add properties to object
+sulav.location = "Gongabu";
+sulav["skill"] = ["nodejs", "reactjs"];
+
+console.log(sulav);
+
+//Challenge
+const client = {
+  name: "Johnas",
+  friends: ["Sulav", "Sham", "Prabu"],
+};
+console.log(
+  `${client.name} has ${client.friends.length} friends and his best friend is ${client.friends[0]}`
+);
 */
+
+//Object Methods
+
+const sulav = {
+  firstName: "Sulvav",
+  lastName: "Shrestha",
+  birthYear: "2000",
+  job: "student",
+  hasDriverLiscence: false,
+  friends: ["ram", "shyam", "hari"],
+
+  //   calcAge: function () {
+  //     return 2024 - this.birthYear;
+  //   },
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${sulav.firstName} is a ${sulav.age} year old student. He has ${
+      sulav.hasDriverLiscence ? "has" : "no"
+    } Driver's liscence`;
+  },
+};
+
+console.log(sulav.calcAge());
+console.log(sulav.age);
+//console.log(sulav["calcAge"](2000));
+
+//Challenge
+//"Sulav is a 20 year old student. He has a/no Driver's liscence."
+
+console.log(sulav.getSummary());
