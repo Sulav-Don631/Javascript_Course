@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
 let hasDriversLiscence = false;
 const passTest = true;
@@ -246,7 +246,7 @@ for (let i = 0; i <= sulav.length; i++) {
 
 //Looping backward
 
-const sulav = ["Sulav", "Shrestha", 23, "student", ["google", "facebook"]];
+const sulav = ['Sulav', 'Shrestha', 23, 'student', ['google', 'facebook']];
 
 for (let i = sulav.length - 1; i >= 0; i--) {
   console.log(sulav[i]);
@@ -255,7 +255,7 @@ for (let i = sulav.length - 1; i >= 0; i--) {
 //while loop
 let rep = 1;
 while (rep < 10) {
-  console.log("you are doing great");
+  console.log('you are doing great');
   rep++;
 }
 
@@ -264,6 +264,6 @@ while (dice != 6) {
   console.log(`You rolled dice ${dice}`);
   dice = Math.trunc(Math.random() * 6 + 1);
   if (dice === 6) {
-    console.log("Loop is ending..");
+    console.log('Loop is ending..');
   }
 }
