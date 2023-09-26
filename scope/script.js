@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 const calcAge = function (birthYear) {
   const age = 2037 - birthYear;
 
@@ -33,3 +33,39 @@ const calcAge = function (birthYear) {
 
 const firstName = "Sulav";
 calcAge(1991);
+*/
+
+//This Keyword
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this); //undefined
+};
+calcAge(2037);
+
+const calcAgeArrow = (birthYear) => {
+  console.log(2037 - birthYear);
+  console.log(this); //Points to the this keyword in the global scope
+};
+calcAgeArrow(2037);
+
+const sulav = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+
+sulav.calcAge();
+
+const matilda = {
+  year: 1917,
+};
+
+matilda.calcAge = sulav.calcAge; //Method Borrowing
+matilda.calcAge();
+
+const f = sulav.calcAge;
+//f();  //undefined
