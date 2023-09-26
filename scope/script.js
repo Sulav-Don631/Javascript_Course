@@ -33,7 +33,7 @@ const calcAge = function (birthYear) {
 
 const firstName = "Sulav";
 calcAge(1991);
-*/
+
 
 //This Keyword
 console.log(this);
@@ -69,3 +69,53 @@ matilda.calcAge();
 
 const f = sulav.calcAge;
 //f();  //undefined
+
+
+var firstName = "Sulav";
+
+const sulav = {
+  year: 1991,
+  firstName: "Sulav Shrestha",
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+
+    //Sloution 1
+    // const self = this;
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey,${this.firstName}`);
+  },
+};
+
+sulav.greet();
+sulav.calcAge();
+
+//arguement Keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+// Arguement is not defined in Arrow function
+const addExprArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addExprArrow(2, 5);
+addExprArrow(2, 5, 8, 9);
+*/
