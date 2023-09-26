@@ -119,3 +119,36 @@ const addExprArrow = (a, b) => {
 addExprArrow(2, 5);
 addExprArrow(2, 5, 8, 9);
 */
+
+//Primitive Vs Object
+let lastName = "Shrestha";
+let oldLastName = lastName;
+lastName = "Davis";
+
+console.log(lastName);
+console.log(oldLastName);
+
+const sulav = {
+  firstName: "Sulav",
+  lastName: "Shrestha",
+};
+
+const newSulav = sulav;
+newSulav.lastName = "Hero";
+
+console.log("Before", sulav);
+console.log("After", newSulav);
+
+//Copying object
+const sulav2 = {
+  firstName: "Sulav",
+  lastName: "Shrestha",
+  family: ["Sudin", "Subash"],
+};
+
+const sulavCopy = Object.assign({}, sulav2); //Copys first level object but doesnot copies object which is nested inside it
+sulavCopy.lastName = "Hero";
+
+sulavCopy.family.push("Pramila");
+console.log(sulav2);
+console.log(sulavCopy);
