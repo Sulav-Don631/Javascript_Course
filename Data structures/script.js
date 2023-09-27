@@ -42,6 +42,11 @@ const restaurant = {
       `Here's your delicious pasta with ingredients ${ing1},${ing2},${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 restaurant.orderDilevery({
@@ -115,6 +120,41 @@ console.log(letters);
 const newResturant = { ...restaurant, founder: "Sulav" };
 console.log(newResturant);
 
+//Destructuring with Rest Operators
+//Spread, because right side of the =
+const spr = [1, 2, ...[3, 4]];
+
+//REST,because left side of the =
+const [i, j, ...others] = [1, 2, 3, 4, 5];
+console.log(i, j, others);
+
+const [hero, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(hero, otherFood);
+
+//Objects
+const { sat, ...weekDays } = restaurant.openingHours;
+console.log(sat, weekDays);
+
+//Function
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(2, 3, 4, 5);
+add(2, 3, 4, 5, 6);
+
+const x = [1, 2, 3, 4, 5, 6];
+add(...x);
+
+restaurant.orderPizza("mushroom", "olivs", "dough", "cheese", "bacon");
 ///////////////////////////////////
 /*
 const arr = [1, 2, 3];
