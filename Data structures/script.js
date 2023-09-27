@@ -36,6 +36,12 @@ const restaurant = {
       `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be dilevered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here's your delicious pasta with ingredients ${ing1},${ing2},${ing3}`
+    );
+  },
 };
 
 restaurant.orderDilevery({
@@ -74,6 +80,40 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+
+//Spread Operators
+
+const arr = [7, 8, 9];
+const badarr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badarr);
+
+const newNewArr = [1, 2, ...arr];
+console.log(newNewArr);
+
+//Copying array
+const menuCpoy = [...restaurant.mainMenu];
+console.log(menuCpoy);
+
+//Joining array
+const menuList = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menuList);
+
+//Iterables : arrays , maps, strings, sets NOT objects.
+
+const str = "Sulav";
+const letters = [...str, " ", "st"];
+console.log(letters);
+
+// const ingredients = [
+//   prompt("Ingredients 1"),
+//   prompt("Ingredients 2"),
+//   prompt("Ingredients 3"),
+// ];
+// restaurant.orderPasta(...ingredients);
+
+//Objects
+const newResturant = { ...restaurant, founder: "Sulav" };
+console.log(newResturant);
 
 ///////////////////////////////////
 /*
