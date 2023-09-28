@@ -1,7 +1,5 @@
-/*
 const game = {
   team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
   players: [
     [
       "Neuer",
@@ -30,6 +28,8 @@ const game = {
       "Gotze",
     ],
   ],
+  team2: "Borrussia Dortmund",
+
   score: "4:0",
   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
   date: "Nov 9th, 2037",
@@ -40,6 +40,8 @@ const game = {
   },
 };
 
+//Coding Challenge 1
+/*
 const [player1, player2] = game.players;
 console.log(player1, player2);
 
@@ -63,3 +65,28 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log(`Team1 is more likely to win`);
 */
+
+//Coding Challenge 2
+for (const [key, values] of game.scored.entries()) {
+  console.log(`Goal ${key + 1}: ${values}`);
+}
+
+let tot = 0;
+const entry = Object.entries(game.odds);
+for (const [key, values] of entry) {
+  tot = +values;
+}
+const avg = tot / entry.length;
+console.log(avg);
+
+for (const [key, values] of Object.entries(game.odds)) {
+  const teamStr = key === "x" ? "draw " : `Victory ${game[key]}`;
+  console.log(`Odd of ${teamStr} : ${values}`);
+}
+const scorred = {
+  Gnarby: 1,
+  Hummels: 1,
+  Lewandowski: 2,
+};
+const newGame = { ...game, scorred };
+console.log(newGame);

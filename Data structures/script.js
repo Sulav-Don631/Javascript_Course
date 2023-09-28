@@ -81,6 +81,7 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} We are open at ${open} and closed at ${close}`);
 }
+
 /*
 
 if (restaurant.openingHours && restaurant.openingHours.mon)
