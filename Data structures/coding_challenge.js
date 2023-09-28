@@ -1,3 +1,4 @@
+/*
 const game = {
   team1: "Bayern Munich",
   team2: "Borrussia Dortmund",
@@ -61,3 +62,4 @@ printGoals("Davis", "Muler", "Lewandowski", "Kimmich");
 printGoals(...game.scored);
 
 team1 < team2 && console.log(`Team1 is more likely to win`);
+*/
