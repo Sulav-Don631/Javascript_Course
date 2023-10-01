@@ -82,6 +82,14 @@ for (const [key, { open, close }] of entries) {
   console.log(`On ${key} We are open at ${open} and closed at ${close}`);
 }
 
+//Sets
+const orderSets = new Set(["Pizza", "Pizza", "Rissoto", "Burger", "Burger"]);
+console.log(orderSets);
+console.log(new Set("Sulav"));
+console.log(orderSets.size);
+console.log(orderSets.has("Pizza"));
+console.log(orderSets.has("Bread"));
+
 /*
 
 if (restaurant.openingHours && restaurant.openingHours.mon)

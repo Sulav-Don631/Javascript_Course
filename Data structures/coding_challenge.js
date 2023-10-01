@@ -64,7 +64,7 @@ printGoals("Davis", "Muler", "Lewandowski", "Kimmich");
 printGoals(...game.scored);
 
 team1 < team2 && console.log(`Team1 is more likely to win`);
-*/
+
 
 //Coding Challenge 2
 for (const [key, values] of game.scored.entries()) {
@@ -90,3 +90,4 @@ const scorred = {
 };
 const newGame = { ...game, scorred };
 console.log(newGame);
+*/
