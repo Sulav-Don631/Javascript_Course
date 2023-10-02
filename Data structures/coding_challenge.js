@@ -91,3 +91,34 @@ const scorred = {
 const newGame = { ...game, scorred };
 console.log(newGame);
 */
+
+//Coding Challenge 3
+const gameEvents = new Map([
+  [17, "Goal"],
+  [36, "Substitution"],
+  [47, "Goal"],
+  [61, "Substitution"],
+  [61, "Yellow Card"],
+  [69, "Red Card"],
+  [70, "Substitution"],
+  [72, "Substitution"],
+  [76, "Goal"],
+  [80, "Goal"],
+  [92, "Yellow Card"],
+]);
+
+const newEvent = new Set([...gameEvents.values()]);
+console.log(newEvent);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+for (const [key, event] of gameEvents) {
+  console.log(`An ${event} happend,on average every 9 minutes`);
+}
+
+for (const [key, value] of gameEvents) {
+  key < 45
+    ? console.log(`[First Half]${key} : ${value}`)
+    : console.log(`[Seond Half]${key} : ${value}`);
+}
