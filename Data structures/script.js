@@ -61,6 +61,49 @@ restaurant.orderDilevery({
   starterIndex: 2,
 });
 
+//Strings
+
+const airline = "Lumbini Airline";
+const plane = "A320";
+
+console.log(plane[0]);
+console.log(plane.length);
+
+console.log(airline.indexOf("b"));
+console.log(airline.lastIndexOf("i"));
+
+console.log(airline.slice(7));
+
+console.log(airline.slice(0, airline.indexOf(" ")));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  //B and E are the middle seat
+  if (seat.slice(-1) === "B" || seat.slice(-1) === "E") {
+    console.log("It is a middle seat");
+  } else {
+    console.log("Error");
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("2C");
+checkMiddleSeat("11E");
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//Fix capitalization in name
+const passenger = "SuLaV";
+const passengerToLowercase = passenger.toLowerCase();
+const passengerCorrect =
+  passengerToLowercase[0].toUpperCase() + passengerToLowercase.slice(1);
+console.log(passengerCorrect);
+/*
+
 //Looping Over Objects - Property Names
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -141,7 +184,7 @@ console.log([...question]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
 console.log([...question.entries()]);
-/*
+
 
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);

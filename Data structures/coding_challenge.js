@@ -90,7 +90,7 @@ const scorred = {
 };
 const newGame = { ...game, scorred };
 console.log(newGame);
-*/
+
 
 //Coding Challenge 3
 const gameEvents = new Map([
@@ -122,3 +122,4 @@ for (const [key, value] of gameEvents) {
     ? console.log(`[First Half]${key} : ${value}`)
     : console.log(`[Seond Half]${key} : ${value}`);
 }
+*/
